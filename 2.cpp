@@ -65,6 +65,6 @@ int main()
     cout << "X before +1 = " << x_x << endl;
     cout << "X before +1 = " << ++x_x << endl;
     //Переполнение и переход через границу
-
+    
     return 0;
 }
