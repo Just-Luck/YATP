@@ -8,6 +8,7 @@ int main(){
         cout << array[i] << endl;
     }
     // 1 2 3 4 5
+    
     int array2[5] = {};
     for (int i=0; i < 5; ++i){
         cout << array2[i] << endl;
