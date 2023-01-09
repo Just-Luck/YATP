@@ -12,13 +12,15 @@ bool check(char* str, int n){
     int *array = new int[n]{};
     for (int i = 0;i<n;++i){
         if (str[i] == ' ' || str[i] == '\0'){
+            if (counter != 0){
             array[index] = counter;
             if(index > 0 && array[index] != array[index - 1]){
                 delete[] array;
                 return false;
             }
             ++index;
-            counter = 0; 
+            counter = 0;
+            }
         } else counter++;
     }
     delete[] array;
@@ -26,7 +28,7 @@ bool check(char* str, int n){
 }
 
 int main(){
-    char str[] = "qwerty qwerty qwerty";
-    cout << check(str, size(str)) << endl; 
+    char str[] = "qwerty&  qwert*y qw$erty";
+    cout << check(str, size(str)) << endl; // 1 | 0 - не равны , 1 - равны
     return 0;
 }
